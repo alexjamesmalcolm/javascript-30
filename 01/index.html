@@ -5,15 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>First Day</title>
-    <link rel="stylesheet" href="../global.css" />
+    <link rel="preload" href="../global.css" as="style" />
+    <link rel="preload" href="main.css" as="style" />
+    <link rel="modulepreload" href="sounds.js" />
+    <link rel="modulepreload" href="keys.js" />
+    <link rel="modulepreload" href="main.js" />
     <script type="module" src="main.js"></script>
+    <link rel="stylesheet" href="../global.css" />
+    <link rel="stylesheet" href="main.css" />
     <meta
       name="description"
       content="The first day of the JavaScript30 series"
     />
   </head>
   <body>
-    <p>This is the first day's work</p>
-    <div id="sounds"></div>
+    <div class="container">
+      <div class="main">
+        <div id="sounds"></div>
+        <input type="range" id="volume" name="volume" />
+        <label for="volume">Volume</label>
+      </div>
+    </div>
   </body>
 </html>
