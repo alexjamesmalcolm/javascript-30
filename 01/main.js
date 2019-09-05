@@ -13,7 +13,9 @@ window.onload = () => {
     new Audio(sound.source);
     const playSound = () => {
       const audioElement = new Audio(sound.source);
-      audioElement.volume = 0.25;
+      const volumeInputElement = document.querySelector("#volume");
+      audioElement.volume = volumeInputElement.value / 100;
+      console.log(audioElement.volume);
       audioElement.play();
       buttonElement.classList.add("active");
       const intervalId = setInterval(() => {
