@@ -16,7 +16,14 @@ window.onload = () => {
       audioElement.volume = 0.25;
       audioElement.play();
       buttonElement.classList.add("active");
-      setTimeout(() => buttonElement.classList.remove("active"), 1000);
+      const intervalId = setInterval(() => {
+        if (audioElement.ended) {
+          buttonElement.classList.remove("active");
+          clearInterval(intervalId);
+        } else {
+          buttonElement.classList.add("active");
+        }
+      }, 10);
     };
     const buttonElement = el(
       `<button><p class="button-key">${sound.key}</p><p class="button-description">${sound.name}</p></button>`
