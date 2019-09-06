@@ -1,0 +1,74 @@
+:root {
+  --second: 0;
+  --minute: 0;
+  --hour: 0;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+}
+
+.clock-body {
+  width: 75vh;
+  height: 75vh;
+  margin: auto;
+  margin-top: 2rem;
+  border: 1rem black solid;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clock-center {
+  position: relative;
+  /* margin: 50%; */
+  width: 0px;
+  height: 0px;
+}
+
+.clock-body .hand {
+  position: absolute;
+  width: 1rem;
+  background-color: black;
+  transform-origin: 0.5rem 0.5rem;
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  padding-top: 1rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.hand-contents {
+  position: absolute;
+  transform: rotate(90deg);
+  bottom: 1rem;
+  width: 3rem;
+  text-align: end;
+}
+
+.clock-body .hand.clock-hour {
+  height: 9.8rem;
+  transform: rotate(calc(30deg * var(--hour) + 180deg));
+}
+
+.clock-body .hand.clock-minute {
+  height: 16rem;
+  transform: rotate(calc(6deg * var(--minute) + 180deg));
+}
+
+.clock-body .hand.clock-minute .hand-contents {
+}
+
+.clock-body .hand.clock-second {
+  height: 13rem;
+  transform: rotate(calc(6deg * var(--second) + 180deg));
+}
+
+.clock-body .hand.clock-second .hand-contents {
+}
+
+.hide {
+  display: none;
+}
