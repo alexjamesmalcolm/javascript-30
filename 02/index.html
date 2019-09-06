@@ -1,11 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="shortcut icon" type="image/png" href="/images/favion-JS3.png" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="shortcut icon" type="image/png" href="/images/favion-JS3.png" />
+    <link rel="modulepreload" href="main.js" />
+    <script type="module" src="main.js"></script>
+    <link rel="preload" href="style.css" as="style" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preload" href="../global.css" as="style" />
+    <link rel="stylesheet" href="../global.css" />
     <title>Second Day</title>
   </head>
-  <body></body>
+  <body>
+    <div class="clock-body">
+      <div class="clock-hour hand"></div>
+      <div class="clock-minute hand"></div>
+      <div class="clock-second hand"></div>
+    </div>
+    <script src="./main.js"></script>
+  </body>
 </html>
