@@ -51,12 +51,12 @@
 }
 
 .clock-body .hand.clock-hour {
-  height: 9.8rem;
+  height: 9.5rem;
   transform: rotate(calc(30deg * var(--hour) + 180deg));
 }
 
 .clock-body .hand.clock-minute {
-  height: 16rem;
+  height: 16.2rem;
   transform: rotate(calc(6deg * var(--minute) + 180deg));
 }
 
