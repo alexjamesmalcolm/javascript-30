@@ -7,6 +7,7 @@
 img {
   border: var(--spacing) var(--border-color) solid;
   filter: blur(var(--blur));
+  max-width: calc(100vw - 2 * var(--spacing));
 }
 
 .container {
