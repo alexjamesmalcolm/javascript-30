@@ -1,5 +1,8 @@
 window.onload = () => {
   const lastNewDay = new Date();
+  const tickSound = document.querySelector("audio#tick");
+  tickSound.volume = 0.1;
+  tickSound.load();
   lastNewDay.setHours(0, 0, 0, 0);
   const finishedLoading = () => {
     const clockBody = document.querySelector(".clock-body");
@@ -15,6 +18,7 @@ window.onload = () => {
     root.style.setProperty("--second", seconds);
     root.style.setProperty("--minute", minutes);
     root.style.setProperty("--hour", hours);
+    tickSound.play().catch(() => {});
   };
   const recursiveSetTimeout = callback => {
     const millisecondsTilNextSecond = 1000 - new Date().getMilliseconds();
