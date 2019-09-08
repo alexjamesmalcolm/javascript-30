@@ -1,0 +1,21 @@
+:root {
+  --border-color: black;
+  --spacing: 5px;
+  --blur: 5px;
+}
+
+img {
+  border: var(--spacing) var(--border-color) solid;
+  filter: blur(var(--blur));
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.controls {
+  width: max-content;
+  margin: 1rem;
+}
