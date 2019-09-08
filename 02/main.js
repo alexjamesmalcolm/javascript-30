@@ -18,7 +18,9 @@ window.onload = () => {
     root.style.setProperty("--second", seconds);
     root.style.setProperty("--minute", minutes);
     root.style.setProperty("--hour", hours);
-    tickSound.play().catch(() => {});
+    if (!document.hidden) {
+      tickSound.play().catch(() => {});
+    }
   };
   const recursiveSetTimeout = callback => {
     const millisecondsTilNextSecond = 1000 - new Date().getMilliseconds();
